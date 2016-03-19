@@ -1,3 +1,3 @@
-# My Awesome Book
+# 简介
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+总结Java和Android开发中遇到的问题和学习到的知识，以及踩过的坑，记住的经验。便于随时查看，遗忘太快，需要昌总结，勤复习。由于博客记录索引不是太方便，试着用Gitbook来管理目录。
