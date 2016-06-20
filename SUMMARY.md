@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [读书笔记](读书笔记系列.md)
+   * Glide Preview
 * [开发经验](开发经验.md)
 * [自定义View](自定义View.md)
 * [面试题目总结](面试题目总结.md)
