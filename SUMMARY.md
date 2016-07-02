@@ -8,8 +8,8 @@
 * [自定义View](自定义View.md)
 * [开发经验](开发经验.md)
 * [设计模式基础](设计模式基础.md)
-* [RxJava](rxjava.md)
 * [CV4Android](CV4Android.md)
+* [RxJava](rxjava.md)
 * [Kotlin](kotlin.md)
 * [Python](python.md)
 
