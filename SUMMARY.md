@@ -8,5 +8,5 @@
 * [面试题目总结](面试题目总结.md)
 * [设计模式基础](设计模式基础.md)
 * [RxJava](rxjava.md)
-* [CV图像处理](CV4Android.md)
+* [CV4Android](CV4Android.md)
 
