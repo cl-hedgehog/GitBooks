@@ -10,5 +10,5 @@
 * [RxJava](rxjava.md)
 * [CV4Android](CV4Android.md)
 * [Kotlin](kotlin.md)
-* Python
+* [Python](python.md)
 
