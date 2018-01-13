@@ -4,9 +4,9 @@ Over-the-phone
 
 * **dp是什么，sp呢，有什么区别**
 
-1. [Android中dp、sp、px的区别](https://www.cnblogs.com/xmu-chenming/p/5790621.html)
+1.[Android中dp、sp、px的区别](https://www.cnblogs.com/xmu-chenming/p/5790621.html)
 
-    2.[Android中dp,px,sp概念梳理以及如何做到屏幕适配](http://blog.csdn.net/jiangwei0910410003/article/details/40509571)
+2.[Android中dp,px,sp概念梳理以及如何做到屏幕适配](http://blog.csdn.net/jiangwei0910410003/article/details/40509571)
 
 总结：使用px做单位会出现不同分辨率的手机上大小不一致的情况，同样是5‘大的屏幕，比如相同的30px，宽度720p的手机上会看着比宽度1080P的手机上更宽，因为占比更大。引入dp这样一种独立的单位，系统会根据手机自己的density对dp做一定的变换，，可以做到同样dp单位下的数值在不同分辨率手机上显示大小是一致的，这也是一种手机屏幕适配的方法。Android中定义的标准是：
 
@@ -50,6 +50,7 @@ sp跟dp类似，只不过是专门针对字体的单位，可以跟随系统字�
 * GC回收机制熟悉么，分代算法知道么
 
 * Java的类类加载原理
+
 * 内存泄漏如何排查，MAT分析方法以及原理，各种泄漏的原因是什么比如Handler为什么会泄漏
 * gradle熟悉么，自动打包知道么
 * 介绍下先的app架构和通信
