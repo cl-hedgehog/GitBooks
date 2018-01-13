@@ -2,10 +2,11 @@
 
 Over-the-phone
 
-* ##### dp是什么，sp呢，有什么区别
-* [Android中dp、sp、px的区别](https://www.cnblogs.com/xmu-chenming/p/5790621.html)
+* **dp是什么，sp呢，有什么区别**
 
-* [Android中dp,px,sp概念梳理以及如何做到屏幕适配](http://blog.csdn.net/jiangwei0910410003/article/details/40509571)
+1. [Android中dp、sp、px的区别](https://www.cnblogs.com/xmu-chenming/p/5790621.html)
+
+    2. [Android中dp,px,sp概念梳理以及如何做到屏幕适配](http://blog.csdn.net/jiangwei0910410003/article/details/40509571)
 
 总结：使用px做单位会出现不同分辨率的手机上大小不一致的情况，同样是5‘大的屏幕，比如相同的30px，宽度720p的手机上会看着比宽度1080P的手机上更宽，因为占比更大。引入dp这样一种独立的单位，系统会根据手机自己的density对dp做一定的变换，，可以做到同样dp单位下的数值在不同分辨率手机上显示大小是一致的，这也是一种手机屏幕适配的方法。Android中定义的标准是：
 
@@ -26,9 +27,11 @@ Over-the-phone
 
 sp跟dp类似，只不过是专门针对字体的单位，可以跟随系统字体大小设置变化，这个有好有坏，如果你应用中布局不会受到字体大小的影响并希望app中的字体随着系统设置变化而变化，就用sp，否则可以用dp，试了下大厂的app都没有随着系统设置的字号变大而改变，个人感觉这个应该变成项目的编码规范，哪些字体需要明确出来。
 
-再扩展一下，自定义View中经常使用的几种有关的方法：参考自定义View章节之自定义View中的属性自定义
+再扩展一下，自定义View中经常使用的几种有关的方法：参考【自定义View】章节之【自定义View中的属性自定义】
 
-* 自定义View，ViewGroup注意那些回调？
+* **自定义View，ViewGroup注意那些回调？**
+
+参考【自定义View】
 
 * 界面卡顿的原因以及解决方法
 
@@ -43,6 +46,7 @@ sp跟dp类似，只不过是专门针对字体的单位，可以跟随系统字�
 * Activity的生命周期，finish调用后其他生命周期还会走么？
 
 * FW层熟悉么，源码看过么
+
 * GC回收机制熟悉么，分代算法知道么
 * Java的类类加载原理
 * 内存泄漏如何排查，MAT分析方法以及原理，各种泄漏的原因是什么比如Handler为什么会泄漏
