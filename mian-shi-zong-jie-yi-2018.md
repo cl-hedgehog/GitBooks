@@ -35,6 +35,7 @@ sp跟dp类似，只不过是专门针对字体的单位，可以跟随系统字�
 * android中的存储类型
 
 * service用过么，基本调用方法
+
 * Handler机制
 * LinearLayout、FrameLayout、RelativeLayout性能对比，为什么
 * Activity的生命周期，finish调用后其他生命周期还会走么？
