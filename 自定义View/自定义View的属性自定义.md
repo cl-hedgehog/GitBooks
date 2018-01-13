@@ -1,5 +1,3 @@
-### 
-
 ### 自定义View的属性
 
 1. 首先在工程目录的res/values/attrs.xml中创建属于自己的自定义控件的属性集合。
@@ -58,7 +56,7 @@ public RoundProgressBar(Context context, AttributeSet attrs, int defStyle) {
 
 这些字段经过上面的获取，后续的使用中就有了XML中设置的值或者默认值。
 
-   2. 关于属性中跟size相关的几个函数
+1. 关于属性中跟size相关的几个函数
 
 介绍下几个获取size的函数，注意选取正确的函数获取px，dp等单位对应的值。
 
@@ -111,6 +109,4 @@ getDimensionPixelSize返回int，不过是经过四舍五入的int。
 源码的分析可以参考这一篇：[Android Dimension转换算法原理分析](http://blog.csdn.net/xilove102/article/details/52702908)
 
 从分析也可以得知，sp之所以可能随着系统字体设置大小而改变，也是计算的时候乘以了个系数。
-
-
 
