@@ -7,6 +7,7 @@
   * [Android基础知识](android基础知识.md)
   * [面试总结一2018](mian-shi-zong-jie-yi-2018.md)
 * [自定义View](自定义View.md)
+  * [自定义View中的自定义属性](自定义View/zi-ding-yi-view-zhong-de-zi-ding-yi-shu-xing.md)
 * [开发经验](开发经验.md)
 * [设计模式基础](设计模式基础.md)
 * [CV\_IM&VOT](cv_IM_VOT.md)
@@ -14,5 +15,4 @@
 * [Mac\_Talk](mactalk.md)
 * [Kotlin](kotlin.md)
 * [Python](python.md)
-* [Html](html.md)
 
