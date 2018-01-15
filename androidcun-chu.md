@@ -26,7 +26,7 @@
 
 下面就列出关键的知识点，具体使用和解释可以参见上面转载的博客。
 
-1. SharedPreferences
+a\) SharedPreferences
 
 ![](/assets/Android-sp.png)
 
@@ -63,7 +63,7 @@ if (headPic!="") {
 
 然后接着有面试官会问Base64编码的问题，这个会在其他单元总结下各种常用的编解码和加密解密。简单说Base64算不上加密解密领域里的算法，但是是一种常用的编解码手段。
 
-1. 文件存储
+b\) 文件存储
 
 [彻底了解android中的内部存储与外部存储](http://www.cnblogs.com/jingmo0319/p/5586559.html)
 
@@ -72,6 +72,10 @@ if (headPic!="") {
 1-文件存储中的模式设置
 
 > **注**：自 API 级别 17 以来，常量[`MODE_WORLD_READABLE`](https://developer.android.com/reference/android/content/Context.html#MODE_WORLD_READABLE)和[`MODE_WORLD_WRITEABLE`](https://developer.android.com/reference/android/content/Context.html#MODE_WORLD_WRITEABLE)已被弃用。从 Android N 开始，使用这些常量将会导致引发[`SecurityException`](https://developer.android.com/reference/java/lang/SecurityException.html)。这意味着，面向 Android N 和更高版本的应用无法按名称共享私有文件，尝试共享“file://”URI 将会导致引发[`FileUriExposedException`](https://developer.android.com/reference/android/os/FileUriExposedException.html)。 如果您的应用需要与其他应用共享私有文件，则可以将[`FileProvider`](https://developer.android.com/reference/android/support/v4/content/FileProvider.html)与[`FLAG_GRANT_READ_URI_PERMISSION`](https://developer.android.com/reference/android/content/Intent.html#FLAG_GRANT_READ_URI_PERMISSION)配合使用。另请参阅[共享文件](https://developer.android.com/training/secure-file-sharing/index.html)。
+
+Android N \(Android 7.0/7.1.1, api 24/25\)开始有FileProvider方案，可以参考：
+
+[Android开发之深入理解Android 7.0系统权限更改相关文档](http://www.cnblogs.com/dazhao/p/6547811.html)
 
 2-应用私有目录的权限：sd卡上属于app的私有目录权限问题
 
