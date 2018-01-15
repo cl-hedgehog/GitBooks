@@ -67,6 +67,10 @@ b\) 文件存储
 
 [彻底了解android中的内部存储与外部存储](http://www.cnblogs.com/jingmo0319/p/5586559.html)
 
+![](/assets/Android内部外部存储.png)
+
+
+
 几个跟api版本有关的备注：
 
 1-文件存储中的模式设置
