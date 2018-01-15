@@ -12,9 +12,7 @@
 * [开发经验](开发经验.md)
 * [设计模式基础](设计模式基础.md)
 * [CV\_IM&VOT](cv_IM_VOT.md)
-* [RxJava](rxjava.md)
 * [Mac\_Talk](mactalk.md)
-* [Kotlin](kotlin.md)
 * [Python](python.md)
-* [参考资料备用](can-kao-zi-liao-bei-yong.md)
+* [参考资料与备用主题](can-kao-zi-liao-bei-yong.md)
 
