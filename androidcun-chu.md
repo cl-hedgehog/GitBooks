@@ -91,3 +91,13 @@ if (headPic!="") {
 
 官网的意思是如果你的手机支持sd扩展，又插了一张sd卡，那么扩展卡上也是可以有app私有目录的，但是要从Andorid4.4开始，并且要使用指定的方法。
 
+4- 补充测试：
+
+Android8.0下的打印app内部存储目录路径是这样的：不是/data/data/而是/data/user/0/
+
+> context.getCacheDir\(\) is /data/user/0/com.dreamzone.mtime/cache
+>
+> context.getFilesDir\(\) is /data/user/0/com.dreamzone.mtime/files
+
+
+
