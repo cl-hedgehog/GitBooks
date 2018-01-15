@@ -69,11 +69,11 @@ if (headPic!="") {
 
 几个跟api版本有关的备注：
 
-1. 文件存储中的模式设置
+1-文件存储中的模式设置
 
 > **注**：自 API 级别 17 以来，常量[`MODE_WORLD_READABLE`](https://developer.android.com/reference/android/content/Context.html#MODE_WORLD_READABLE)和[`MODE_WORLD_WRITEABLE`](https://developer.android.com/reference/android/content/Context.html#MODE_WORLD_WRITEABLE)已被弃用。从 Android N 开始，使用这些常量将会导致引发[`SecurityException`](https://developer.android.com/reference/java/lang/SecurityException.html)。这意味着，面向 Android N 和更高版本的应用无法按名称共享私有文件，尝试共享“file://”URI 将会导致引发[`FileUriExposedException`](https://developer.android.com/reference/android/os/FileUriExposedException.html)。 如果您的应用需要与其他应用共享私有文件，则可以将[`FileProvider`](https://developer.android.com/reference/android/support/v4/content/FileProvider.html)与[`FLAG_GRANT_READ_URI_PERMISSION`](https://developer.android.com/reference/android/content/Intent.html#FLAG_GRANT_READ_URI_PERMISSION)配合使用。另请参阅[共享文件](https://developer.android.com/training/secure-file-sharing/index.html)。
 
-    2.  应用私有目录的权限：sd卡上属于app的私有目录权限问题
+2-应用私有目录的权限：sd卡上属于app的私有目录权限问题
 
 > 从 Android 4.4 开始，读取或写入应用私有目录中的文件不再需要[`READ_EXTERNAL_STORAGE`](https://developer.android.com/reference/android/Manifest.permission.html#READ_EXTERNAL_STORAGE)或[`WRITE_EXTERNAL_STORAGE`](https://developer.android.com/reference/android/Manifest.permission.html#WRITE_EXTERNAL_STORAGE)权限。 因此，您可以通过添加[`maxSdkVersion`](https://developer.android.com/guide/topics/manifest/uses-permission-element.html#maxSdk)属性来声明，只能在较低版本的 Android 中请求该权限：
 
@@ -85,7 +85,7 @@ if (headPic!="") {
 </manifest>
 ```
 
-    3. 支持sd扩展槽的手机
+3-支持sd扩展槽的手机
 
 > 有时，已分配某个内部存储器分区用作外部存储的设备可能还提供了 SD 卡槽。在使用运行 Android 4.3 和更低版本的这类设备时，[`getExternalFilesDir()`](https://developer.android.com/reference/android/content/Context.html#getExternalFilesDir%28java.lang.String%29)方法将仅提供内部分区的访问权限，而您的应用无法读取或写入 SD 卡。不过，从 Android 4.4 开始，可通过调用[`getExternalFilesDirs()`](https://developer.android.com/reference/android/content/Context.html#getExternalFilesDirs%28java.lang.String%29)来同时访问两个位置，该方法将会返回包含各个位置条目的[`File`](https://developer.android.com/reference/java/io/File.html)数组。 数组中的第一个条目被视为外部主存储；除非该位置已满或不可用，否则应该使用该位置。 如果您希望在支持 Android 4.3 和更低版本的同时访问两个可能的位置，请使用[支持库](https://developer.android.com/tools/support-library/index.html)中的静态方法[`ContextCompat.getExternalFilesDirs()`](https://developer.android.com/reference/android/support/v4/content/ContextCompat.html#getExternalFilesDirs%28android.content.Context, java.lang.String%29)。 在 Android 4.3 和更低版本中，此方法也会返回一个[`File`](https://developer.android.com/reference/java/io/File.html)数组，但其中始终仅包含一个条目。
 
