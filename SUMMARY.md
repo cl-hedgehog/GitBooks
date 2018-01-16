@@ -6,7 +6,6 @@
 * [Android基本知识](面试题目总结.md)
   * [Android基础必备](android基础知识.md)
   * [Android存储](androidcun-chu.md)
-  * [面试汇总之一](mian-shi-zong-jie-yi-2018.md)
 * [自定义View](/自定义View.md#自定义viewviewgroup)
   * [自定义View中的属性自定义](自定义View/zi-ding-yi-view-zhong-de-shu-xing-zi-ding-yi.md)
 * [开发经验](开发经验.md)
@@ -15,4 +14,8 @@
 * [Mac\_Talk](mactalk.md)
 * [Python](python.md)
 * [参考资料与备用主题](can-kao-zi-liao-bei-yong.md)
+* [面试那些事](mian-shi-na-xie-shi.md)
+  * [近期参加的各大公司面试总结-转](mian-shi-na-xie-shi/jin-qi-can-jia-de-ge-da-gong-si-mian-shi-zong-7ed3-zhuan.md)
+  * [面试汇总之二](mian-shi-na-xie-shi/mian-shi-hui-zong-zhi-er.md)
+* [面试汇总之一](mian-shi-na-xie-shi/mian-shi-zong-jie-yi.md)
 
