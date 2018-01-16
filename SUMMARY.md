@@ -15,7 +15,7 @@
 * [Python](python.md)
 * [参考资料与备用主题](can-kao-zi-liao-bei-yong.md)
 * [面试那些事](mian-shi-na-xie-shi.md)
-  * [近期参加的各大公司面试总结-转](mian-shi-na-xie-shi/jin-qi-can-jia-de-ge-da-gong-si-mian-shi-zong-7ed3-zhuan.md)
-  * [面试汇总之二](mian-shi-na-xie-shi/mian-shi-hui-zong-zhi-er.md)
-* [面试汇总之一](mian-shi-na-xie-shi/mian-shi-zong-jie-yi.md)
+  * [面试汇总之二](面试那些事/mian-shi-zong-jie-er.md)
+* [面试汇总之一](面试那些事/mian-shi-zong-jie-yi.md)
+* [近期参加的各大公司面试总结](面试那些事/jin-qi-da-gong-si-mian-shi-zong.md)
 
