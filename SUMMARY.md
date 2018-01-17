@@ -7,24 +7,15 @@
   * [Android基础必备](android基础知识.md)
   * [Android存储](androidcun-chu.md)
 * [自定义View](/自定义View.md#自定义viewviewgroup)
-
   * [自定义View中的属性自定义](自定义View/zi-ding-yi-view-zhong-de-shu-xing-zi-ding-yi.md)
-
 * [开发经验](开发经验.md)
-
 * [设计模式基础](设计模式基础.md)
-
 * [CV\_IM&VOT](cv_IM_VOT.md)
 * [Mac\_Talk](mactalk.md)
 * [Python](python.md)
 * [参考资料与备用主题](can-kao-zi-liao-bei-yong.md)
 * [面试那些事](mian-shi-na-xie-shi.md)
-
-  * 面试汇总之一
-
-  * 面试汇总之二
-
-  * 近期参加的各大公司面试总结
-
-
+  * [面试汇总之一](面试那些事/mian-shi-zong-jie-yi.md)
+  * [面试汇总之二](面试那些事/mian-shi-zong-jie-er.md)
+  * [近期参加的各大公司面试总结](面试那些事/jin-qi-da-gong-si-mian-shi-zong.md)
 
