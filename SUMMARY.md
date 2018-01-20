@@ -9,6 +9,7 @@
 * [自定义View](/自定义View.md#自定义viewviewgroup)
   * [自定义View中的属性自定义](自定义View/自定义View的属性自定义.md)
 * [开发经验](开发经验.md)
+  * [进程保活](activityna-xie-you-yong-de-hui-diao-fang-fa.md)
 * [设计模式基础](设计模式基础.md)
 * [CV\_IM&VOT](cv_IM_VOT.md)
 * [Mac\_Talk](mactalk.md)
@@ -19,5 +20,10 @@
   * [面试汇总之二](面试那些事/mian-shi-zong-jie-er.md)
   * [面试汇总之三](/mian-shi-hui-zong-zhi-san.md)
   * [近期参加的各大公司面试总结](面试那些事/jin-qi-da-gong-si-mian-shi-zong.md)
-* [Activity那些有用的回调方法](activityna-xie-you-yong-de-hui-diao-fang-fa.md)
+
+* [Java知识](#)
+
+  * [ArrayList与Arrays.asList](#)
+
+
 
