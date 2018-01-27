@@ -65,11 +65,11 @@ AsyncTask的两个线程池。
 
 比如，当你的手指（或者其它）移动屏幕的时候会触发这个事件，比如当你的手指在屏幕上拖动一个listView或者一个ScrollView而不是去按上面的按钮时会触发这个事件。在设计设置页面的滑动开关时，如果不监听ACTION\_CANCEL，在滑动到中间时，如果你手指上下移动，就是移动到开关控件之外，则此时会触发ACTION\_CANCEL，而不是ACTION\_UP，造成开关的按钮停顿在中间位置。意思就是，当用户保持按下操作，并从你的控件转移到外层控件时，会触发ACTION\_CANCEL，建议进行处理～当前的手势被中断，不会再接收到关于它的记录。推荐将这个事件作为 ACTION\_UP 来看待，但是要区别于普通的 ACTION\_UP。
 
-[android MotionEvent.ACTION\_CANCEL情景分析](http://blog.csdn.net/y444400/article/details/53435696)
+ref1:[android MotionEvent.ACTION\_CANCEL情景分析](http://blog.csdn.net/y444400/article/details/53435696)
 
-[关于MotionEvent.ACTION\_CANCEL带来的滑动问题解决](http://blog.csdn.net/kingofhacker/article/details/75111372)
+ref2:[关于MotionEvent.ACTION\_CANCEL带来的滑动问题解决](http://blog.csdn.net/kingofhacker/article/details/75111372)
 
-step1. 父View收到ACTION\_DOWN，如果没有拦截事件，则ACTION\_DOWN前驱事件被子视图接收，父视图后续事件会发送到View。step2. 此时如果在父View中拦截ACTION\_UP或ACTION\_MOVE，在第一次父视图拦截消息的瞬间，父视图指定子视图不接受后续消息了，同时子视图会收到ACTION\_CANCEL事件。  
+step1. 父View收到ACTION\_DOWN，如果没有拦截事件，则ACTION\_DOWN前驱事件被子视图接收，父视图后续事件会发送到View。step2. 此时如果在父View中拦截ACTION\_UP或ACTION\_MOVE，在第一次父视图拦截消息的瞬间，父视图指定子视图不接受后续消息了，同时子视图会收到ACTION\_CANCEL事件。  
 一般ACTION\_CANCEL和ACTION\_UP都作为View一段事件处理的结束。
 
 几乎所有的自定义控件都要手动处理onTouchEvent事件,我们知道,onTouchEvent方法返回的布尔值决定了你是否处理\(消费当前事件\),但是这么笼统的说其实是不准确的.准确来说,是当手指按下,也就是onTouchEvent接收到ACTION\_DOWN事件的时候,如果返回true,那么就代表这次事件被我们处理,后来的ACTION\_MOVE和ACTION\_UP的返回结果是无所谓的. 同样的,如果在ACTION\_DOWN的时候我们返回了false,那么后来的事件也不会传到这里.
@@ -83,6 +83,66 @@ ACTION\_CANCLE事件如何处理?关于处理,有两种办法:
 1.如果是类似滑动开关,开关随着手指移动,当手指不小心移动到开关外面,我们可以对cancle进行判断，触发cancle的时候，将用户未做完的动作自动执行，也就是自动将开关滑动到左边或者右边。具体逻辑自行处理.如果你觉得这种不太好，那么请看第二种解决方案。
 
 2.类似于自定义progressBar，触发cancle的时候没法进行自动处理。其实我们可以在onTouchEvent里面先调用requestDisallowInterceptTouchEvent\(true\);，这句代码的意思就是不允许父控件拦截我们的触摸事件，这样action\_canlce事件就永远不会被触发，问题也就不存在了。
+
+ps：我看源码中在ViewGroup中，dispatchtouchEvent总，有一部分处理是关于点击的target的，mFirstTouchTarget的设置是如果有子View有处理touch down这个会被赋值，接下来的事件序列中，在ViewGroup不拦截的情况下回判断新的target和这个旧的是否一致，不一致的时候会执行到
+
+```java
+ // Dispatch to touch targets.
+            if (mFirstTouchTarget == null) {
+                // No touch targets so treat this as an ordinary view.
+                handled = dispatchTransformedTouchEvent(ev, canceled, null,
+                        TouchTarget.ALL_POINTER_IDS);
+            } else {
+                // Dispatch to touch targets, excluding the new touch target if we already
+                // dispatched to it.  Cancel touch targets if necessary.
+                TouchTarget predecessor = null;
+                TouchTarget target = mFirstTouchTarget;
+                while (target != null) {
+                    final TouchTarget next = target.next;
+                    if (alreadyDispatchedToNewTouchTarget && target == newTouchTarget) {
+                        handled = true;
+                    } else {
+                        final boolean cancelChild = resetCancelNextUpFlag(target.child)
+                                || intercepted;
+                        if (dispatchTransformedTouchEvent(ev, cancelChild,
+                                target.child, target.pointerIdBits)) {
+                            handled = true;
+                        }
+                        if (cancelChild) {
+                            if (predecessor == null) {
+                                mFirstTouchTarget = next;
+                            } else {
+                                predecessor.next = next;
+                            }
+                            target.recycle();
+                            target = next;
+                            continue;
+                        }
+                    }
+                    predecessor = target;
+                    target = next;
+                }
+            }
+```
+
+> dispatchTransformedTouchEvent\(ev, cancelChild，target.child, target.pointerIdBits\)）
+
+这个里面会
+
+```java
+if (cancel || oldAction == MotionEvent.ACTION_CANCEL) {
+            event.setAction(MotionEvent.ACTION_CANCEL);
+            if (child == null) {
+                handled = super.dispatchTouchEvent(event);
+            } else {
+                handled = child.dispatchTouchEvent(event);
+            }
+            event.setAction(oldAction);
+            return handled;
+        }
+```
+
+给child发cancel事件，并返回其处理结果，感觉是这里起得作用。但是不确定，也没有验证，关于ScrollView中button的情况，ref1中的是对的，它重写的OnInterceptTouchEvent方法中需要处理滑动，所以交由自己处理了。
 
 * 怎么处理嵌套View的滑动冲突问题
 
