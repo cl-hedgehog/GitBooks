@@ -67,51 +67,29 @@ AsyncTask的两个线程池。
 
 [android MotionEvent.ACTION\_CANCEL情景分析](http://blog.csdn.net/y444400/article/details/53435696)
 
-题目中这种场景就是：是父视图的onInterceptTouchEvent先返回false，子控件消费事件（dispatchTouchEvent返回true）,然后在某种情况下onInterceptTouchEvent返回true，子控件就会收到ACTION\_CANCEL的Event。DOWN传递给了子控件，但是滑动的时候，父控件的onInterceptTouchEvent返回true，导致子控件的前驱事件被拦截，收不到了，就会收到一个ACTION\_CANCEL的Event。在ViewGroup的一段代码里可以看出。
+[关于MotionEvent.ACTION\_CANCEL带来的滑动问题解决](http://blog.csdn.net/kingofhacker/article/details/75111372)
 
-```java
-            // Handle an initial down.
-            if (actionMasked == MotionEvent.ACTION_DOWN) {
-                // Throw away all previous state when starting a new touch gesture.
-                // The framework may have dropped the up or cancel event for the previous gesture
-                // due to an app switch, ANR, or some other state change.
-                cancelAndClearTouchTargets(ev);
-                resetTouchState();
-            }
+step1. 父View收到ACTION\_DOWN，如果没有拦截事件，则ACTION\_DOWN前驱事件被子视图接收，父视图后续事件会发送到View。step2. 此时如果在父View中拦截ACTION\_UP或ACTION\_MOVE，在第一次父视图拦截消息的瞬间，父视图指定子视图不接受后续消息了，同时子视图会收到ACTION\_CANCEL事件。  
+一般ACTION\_CANCEL和ACTION\_UP都作为View一段事件处理的结束。
 
-            // Check for interception.
-            final boolean intercepted;
-            if (actionMasked == MotionEvent.ACTION_DOWN
-                    || mFirstTouchTarget != null) {
-                final boolean disallowIntercept = (mGroupFlags & FLAG_DISALLOW_INTERCEPT) != 0;
-                if (!disallowIntercept) {
-                    intercepted = onInterceptTouchEvent(ev);
-                    ev.setAction(action); // restore action in case it was changed
-                } else {
-                    intercepted = false;
-                }
-            } else {
-                // There are no touch targets and this action is not an initial down
-                // so this view group continues to intercept touches.
-                intercepted = true;
-            }
+几乎所有的自定义控件都要手动处理onTouchEvent事件,我们知道,onTouchEvent方法返回的布尔值决定了你是否处理\(消费当前事件\),但是这么笼统的说其实是不准确的.准确来说,是当手指按下,也就是onTouchEvent接收到ACTION\_DOWN事件的时候,如果返回true,那么就代表这次事件被我们处理,后来的ACTION\_MOVE和ACTION\_UP的返回结果是无所谓的. 同样的,如果在ACTION\_DOWN的时候我们返回了false,那么后来的事件也不会传到这里.
 
-            // If intercepted, start normal event dispatch. Also if there is already
-            // a view that is handling the gesture, do normal event dispatch.
-            if (intercepted || mFirstTouchTarget != null) {
-                ev.setTargetAccessibilityFocus(false);
-            }
+ACTION\_CANCLE事件如何被触发?
 
-            // Check for cancelation.
-            final boolean canceled = resetCancelNextUpFlag(this)
-                    || actionMasked == MotionEvent.ACTION_CANCEL;
-```
+从表象来说明就是:当触摸事件从我们的控件开始,也就是ACTION\_DOWN被我们返回true处理,然后手指移动到当前控件的外面,这时候就会触发ACTION\_CANCLE事件,触发cancle事件就不会接收到up事件!!! 实际上当手指移动到了当前控件之外的时候,这个触摸事件被他的父控件拦截掉了,所以触发了cancle事件.之后的触摸事件就再也不会传递到当前控件的onTouchEvent里面.
+
+ACTION\_CANCLE事件如何处理?关于处理,有两种办法:
+
+1.如果是类似滑动开关,开关随着手指移动,当手指不小心移动到开关外面,我们可以对cancle进行判断，触发cancle的时候，将用户未做完的动作自动执行，也就是自动将开关滑动到左边或者右边。具体逻辑自行处理.如果你觉得这种不太好，那么请看第二种解决方案。
+
+2.类似于自定义progressBar，触发cancle的时候没法进行自动处理。其实我们可以在onTouchEvent里面先调用requestDisallowInterceptTouchEvent\(true\);，这句代码的意思就是不允许父控件拦截我们的触摸事件，这样action\_canlce事件就永远不会被触发，问题也就不存在了。
 
 * 怎么处理嵌套View的滑动冲突问题
 
 * 热修复相关的原理，框架熟悉么
 
 * gradle打包流程熟悉么
+
 * 任意提问环节：其实可以问之前面试中遇到的问题：比如，多模块开发的时候不同的负责人可能会引入重复资源，相同的字符串，相同的icon等但是文件名并不一样，怎样去重？
 
 
