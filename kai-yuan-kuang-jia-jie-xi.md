@@ -8,7 +8,7 @@
 
 [Picasso，Glide，Fresco对比分析](http://blog.csdn.net/github_33304260/article/details/70213300)
 
-[Picasso，Glide，Fresco那个好？](http://www.cnblogs.com/android-blogs/p/5786608.html)
+[Fresco，Glide，Picasso对比分析](https://www.jianshu.com/p/ca5ce4444c37)
 
 
 
