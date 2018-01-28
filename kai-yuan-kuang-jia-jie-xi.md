@@ -8,7 +8,5 @@
 
 [Picasso，Glide，Fresco对比分析](http://blog.csdn.net/github_33304260/article/details/70213300)
 
-[Fresco，Glide，Picasso对比分析](https://www.jianshu.com/p/ca5ce4444c37)
-
-
+[Fresco，Glide，Picasso对比分析](https://www.jianshu.com/p/ca5ce4444c37)---基本上一样的标题啊，可是是两篇
 
