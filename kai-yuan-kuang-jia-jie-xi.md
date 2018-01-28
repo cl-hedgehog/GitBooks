@@ -8,6 +8,8 @@
 
 [Android图片加载框架最全解析（三），深入探究Glide的缓存机制](http://blog.csdn.net/guolin_blog/article/details/54895665)
 
+[Android图片加载框架最全解析（四），玩转Glide的回调与监听](http://blog.csdn.net/guolin_blog/article/details/70215985)
+
 [Android图片加载框架最全解析（八），带你全面了解Glide 4的用法](http://blog.csdn.net/guolin_blog/article/details/78582548)
 
 * 经常会被问到三者的对比，其实最好是看下源码解析，经典的值得学习，不过要话一些时间去理解。先把总结版搬上来。
