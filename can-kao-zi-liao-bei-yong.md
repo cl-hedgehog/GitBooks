@@ -14,6 +14,10 @@ RxJava
 
 基础：[java动态代理原理及解析](http://blog.csdn.net/scplove/article/details/52451899)
 
+开源代码在github：[https://github.com/Meituan-Dianping/Robust](https://github.com/Meituan-Dianping/Robust)
+
+解析robust的结构：[热修复框架研究之Robust原理](https://zhuanlan.zhihu.com/p/26036302)
+
 ## todo：
 
 #### View和显示：
@@ -36,7 +40,5 @@ RxJava
 
 [Android中热修复框架Robust原理解析+并将框架代码从"闭源"变成"开源"\(上篇\)](http://blog.csdn.net/maiduoudo/article/details/53783016)：有andfix和Dexposed的解析链接
 
-开源代码在github：[https://github.com/Meituan-Dianping/Robust](https://github.com/Meituan-Dianping/Robust)
 
-解析robust的结构：[热修复框架研究之Robust原理](https://zhuanlan.zhihu.com/p/26036302)
 
