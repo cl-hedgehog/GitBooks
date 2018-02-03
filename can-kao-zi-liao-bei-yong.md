@@ -8,9 +8,11 @@ Python
 
 RxJava
 
+## done:
 
+[Android 5.0\(Lollipop\)中的SurfaceTexture，TextureView, SurfaceView和GLSurfaceView](#)
 
-
+基础：[java动态代理原理及解析](http://blog.csdn.net/scplove/article/details/52451899)
 
 ## todo：
 
@@ -22,7 +24,7 @@ RxJava
 
 一个比较系统的结构描述：[Android 的窗口管理系统 \(View, Canvas, WindowManager\)](http://www.cnblogs.com/samchen2009/p/3367496.html)
 
-[Android 5.0\(Lollipop\)中的SurfaceTexture，TextureView, SurfaceView和GLSurfaceView](http://www.bubuko.com/infodetail-656030.html)
+
 
 #### android app架构相关：
 
@@ -32,11 +34,7 @@ RxJava
 
 #### 热修复：
 
-基础：[java动态代理原理及解析](http://blog.csdn.net/scplove/article/details/52451899)
-
 [Android热修复方案比较](https://www.jianshu.com/p/eec0ab6800a4)
 
 [Android中热修复框架Robust原理解析+并将框架代码从"闭源"变成"开源"\(上篇\)](http://blog.csdn.net/maiduoudo/article/details/53783016)
-
-
 
