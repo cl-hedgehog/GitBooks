@@ -38,5 +38,5 @@ RxJava
 
 开源代码在github：[https://github.com/Meituan-Dianping/Robust](https://github.com/Meituan-Dianping/Robust)
 
-[热修复框架研究之Robust原理](#)：解析robust的结构
+解析robust的结构：[热修复框架研究之Robust原理](https://zhuanlan.zhihu.com/p/26036302)
 
