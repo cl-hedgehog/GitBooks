@@ -36,11 +36,7 @@ RxJava
 
 [Android中热修复框架Robust原理解析+并将框架代码从"闭源"变成"开源"\(上篇\)](http://blog.csdn.net/maiduoudo/article/details/53783016)
 
-对github项目的解析：[https://github.com/Meituan-Dianping/Robust](https://github.com/Meituan-Dianping/Robust)
-
-[android热修复之Robust使用\(真正的入门\)](http://blog.csdn.net/ljw124213/article/details/73844811) ：robust的使用
+github：[https://github.com/Meituan-Dianping/Robust](https://github.com/Meituan-Dianping/Robust)
 
 [热修复框架研究之Robust原理](#)：解析robust的结构
-
-
 
