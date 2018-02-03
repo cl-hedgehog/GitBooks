@@ -24,8 +24,6 @@ RxJava
 
 一个比较系统的结构描述：[Android 的窗口管理系统 \(View, Canvas, WindowManager\)](http://www.cnblogs.com/samchen2009/p/3367496.html)
 
-
-
 #### android app架构相关：
 
 [Android数据层架构的实现 上篇](https://www.jianshu.com/p/60e5ebf0096a)
@@ -37,4 +35,6 @@ RxJava
 [Android热修复方案比较](https://www.jianshu.com/p/eec0ab6800a4)
 
 [Android中热修复框架Robust原理解析+并将框架代码从"闭源"变成"开源"\(上篇\)](http://blog.csdn.net/maiduoudo/article/details/53783016)
+
+[热修复框架研究之Robust原理](https://zhuanlan.zhihu.com/p/26036302)：对github项目的一个解析-https://github.com/Meituan-Dianping/Robust
 
