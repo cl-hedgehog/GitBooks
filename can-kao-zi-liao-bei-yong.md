@@ -40,7 +40,7 @@ RxJava
 
 [Android中热修复框架Robust原理解析+并将框架代码从"闭源"变成"开源"\(上篇\)](http://blog.csdn.net/maiduoudo/article/details/53783016)：有andfix和Dexposed的解析链接
 
-[聊聊女娲](http://jiajixin.cn/2015/12/16/nvwa/)：我只是觉得作者聪明勤奋又幽默，自信大概就源于成就吧哈哈
+[聊聊女娲](http://jiajixin.cn/2015/12/16/nvwa/)：我只是觉得作者聪明勤奋又幽默，自信大概就源于成就吧哈哈，其实我看上了里面的链接
 
 dex文件查看：sh d2j-dex2jar.sh class.dex
 
