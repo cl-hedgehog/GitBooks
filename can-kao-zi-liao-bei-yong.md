@@ -44,3 +44,11 @@ RxJava
 
 dex文件查看：sh d2j-dex2jar.sh class.dex
 
+
+
+
+
+以后的todo：
+
+非对称加密，公钥私钥和CA：https://www.cnblogs.com/shijingjing07/p/5965792.html
+
