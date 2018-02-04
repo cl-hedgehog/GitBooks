@@ -30,6 +30,8 @@ RxJava
 
 #### android app架构相关：
 
+[Android组件化方案](http://blog.csdn.net/guiying712/article/details/55213884)
+
 [Android数据层架构的实现 上篇](https://www.jianshu.com/p/60e5ebf0096a)
 
 [探索Android架构的DataLayer层\(DataManager方式\)具体实现](https://www.jianshu.com/p/bd016792a7b9)
@@ -44,11 +46,7 @@ RxJava
 
 dex文件查看：sh d2j-dex2jar.sh class.dex
 
-
-
-
-
 以后的todo：
 
-非对称加密，公钥私钥和CA：https://www.cnblogs.com/shijingjing07/p/5965792.html
+非对称加密，公钥私钥和CA：[https://www.cnblogs.com/shijingjing07/p/5965792.html](https://www.cnblogs.com/shijingjing07/p/5965792.html)
 
