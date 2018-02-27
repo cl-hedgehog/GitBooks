@@ -28,6 +28,8 @@ RxJava
 
 一个比较系统的结构描述：[Android 的窗口管理系统 \(View, Canvas, WindowManager\)](http://www.cnblogs.com/samchen2009/p/3367496.html)
 
+详细介绍了屏幕上刷新Vsync和16ms问题：[Android 屏幕刷新机制](http://www.cnblogs.com/dasusu/p/8311324.html)
+
 #### android app架构相关：
 
 [Android组件化方案](http://blog.csdn.net/guiying712/article/details/55213884)
