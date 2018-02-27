@@ -30,7 +30,7 @@
 
 8-上线后的app性能分析检测有做么
 
-DiDi:一个多小时，很多问题
+DiDi:一个多小时，比较全面
 
 1. ActivityA跳转ActivityB然后B按back返回A，各自的生命周期顺序，A与B均不透明。
 2. Synchronize关键字后面跟类或者对象有什么不同。
