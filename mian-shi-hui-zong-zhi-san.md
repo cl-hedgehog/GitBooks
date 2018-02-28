@@ -47,17 +47,17 @@ DiDi:比较全面
 2. JVM的引用树，什么变量能作为GCRoot？GC垃圾回收的几种方法
 3. ThreadLocal是什么？Looper中的消息死循环为什么没有ANR？
 4. Android中main方法入口在哪里
-5. **jdk1.5？SparseArray和ArrayMap各自的数据结构，前者的查找是怎么实现的，与HashMap的区别**
-6. **Runnable与Callable、Future、FutureTask的区别，AsyncTask用到哪个？AsyncTask是顺序执行么，for循环中执行200次new AsyncTask并execute，会有异常吗**
+5. jdk1.5？SparseArray和ArrayMap各自的数据结构，前者的查找是怎么实现的，与HashMap的区别
+6. Runnable与Callable、Future、FutureTask的区别，AsyncTask用到哪个？AsyncTask是顺序执行么，for循环中执行200次new AsyncTask并execute，会有异常吗
 7. IntentService生命周期是怎样的，使用场合等
 8. **RecyclerView和ListView有什么区别？局部刷新？前者使用时多重type场景下怎么避免滑动卡顿。懒加载怎么实现，怎么优化滑动体验。**
 9. **SQLite的数据库升级用过么**
 10. **开放问题：如果提高启动速度，设计一个延迟加载框架或者sdk的方法和注意的问题。**
 11. Scroller有什么方法，怎么使用的。
 12. 分享下项目中遇到的问题
-13. **webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗？**
+13. webwiew了解？怎么实现和javascript的通信？相互双方的通信。@JavascriptInterface在？版本有bug，除了这个还有其他调用android方法的方案吗？
 14. **ReactiveNative了解多少**
-15. **JNI和NDK熟悉么？Java和C方法之前的相互调用怎么做？**
+15. JNI和NDK熟悉么？Java和C方法之前的相互调用怎么做？
 
 
 
