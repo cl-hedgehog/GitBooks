@@ -24,6 +24,7 @@
 * [Java知识](java知识.md)
   * [ArrayList与Arrays的asList](arraylistyu-arrays-aslist.md)
 * [答疑解惑](da-yi-jie-huo.md)
+  * [好奇的问题](da-yi-jie-huo/hao-qi-de-wen-ti.md)
 * [开源框架解析](kai-yuan-kuang-jia-jie-xi.md)
 * [OKHttp](OkHttp.md)
 * [Gradle](gradle.md)
