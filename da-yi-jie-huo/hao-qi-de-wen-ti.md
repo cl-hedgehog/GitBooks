@@ -4,5 +4,7 @@
 
 [如何为你的开源项目选择一个合适的开源协议？](https://www.oschina.net/news/74999/how-to-choose-a-license)  我知道第一张图很经典，但是第二个是来搞笑的么，作者也太欢脱了
 
+[主流开源协议之间有何异同？](https://www.zhihu.com/question/19568896)
+
 
 
