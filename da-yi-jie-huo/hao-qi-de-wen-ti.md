@@ -14,7 +14,9 @@
 
 [https://spground.github.io/categories/数据结构与算法/](https://spground.github.io/categories/数据结构与算法/)
 
-http://blog.csdn.net/gyn18744026959/article/details/50989116
+[http://blog.csdn.net/gyn18744026959/article/details/50989116](http://blog.csdn.net/gyn18744026959/article/details/50989116)
+
+http://blog.jobbole.com/111680/
 
 
 
