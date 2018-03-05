@@ -20,9 +20,5 @@
 
 [http://blog.jobbole.com/tag/数据结构/](http://blog.jobbole.com/tag/数据结构/)
 
-你要的各种排序的解释  
-
-http://blog.jobbole.com/11745/
-
-
+你要的各种排序的解释  [http://blog.jobbole.com/11745/](http://blog.jobbole.com/11745/)
 
