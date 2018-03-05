@@ -6,5 +6,15 @@
 
 [主流开源协议之间有何异同？](https://www.zhihu.com/question/19568896)
 
+
+
 基础的基础，却蕴含着大智慧，需要真正能讲出来：[为何要使用原码、反码和补码](https://www.2cto.com/kf/201610/557251.html)
+
+
+
+数据结构：
+
+[堆和堆的应用：堆排序和优先队列](http://blog.jobbole.com/113552/)
+
+https://spground.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/
 
